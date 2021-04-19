@@ -1,0 +1,21 @@
+<h1>Welcome to homeapp</h1>
+
+<p>
+	<strong>Welcome:</strong>
+	<% if current_user %>
+		<%= current_user.email %>
+	<% else %>
+		<%= "Stranger" %>
+	<% end %>
+</p>
+
+<% if current_user %>
+	<%= link_to 'Sign out', destroy_user_session_path,
+	method: :delete %>
+	<%= link_to 'Add a grocery', new_grocery_path %>
+	<%= link_to 'Show current user groceries', groceries_path %>
+<% else %>
+<%= link_to 'Sign up', new_user_registration_path %>
+
+<% link_to 'Sign in', new_user_session_path %>
+<% end %>
