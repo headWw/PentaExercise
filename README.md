@@ -1,6 +1,6 @@
 API for managing groceries lists
 Requirements:
-    - a user can be created at an endpoint (up to dev what endpoint)
+    a user can be created at an endpoint (up to dev what endpoint)
         * the user will have the following fields (mandatory, can include others optionally):
             # name
             # email
